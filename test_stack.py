@@ -24,6 +24,14 @@ class TestStack(unittest.TestCase):
         s = Stack()
         with self.assertRaises(IndexError):
             s.pop()
+        
+    def test_clear(self):
+        s = Stack()
+        s.push(1)
+        s.push(2)
+        s.clear()
+        self.assertTrue(s.is_empty())
+
 
 if __name__ == '__main__':
     unittest.main()
